@@ -44,7 +44,11 @@ const Header: React.FC<HeaderProps> = ({ onSectionChange }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 onClick={() => onSectionChange(item.section)}
-                className="text-white hover:text-neon-pink transition-colors duration-300 font-medium"
+                className={`transition-all duration-300 font-medium ${
+                  item.name === 'Chat' 
+                    ? 'bg-gradient-to-r from-neon-pink to-neon-purple text-white px-4 py-2 rounded-lg shadow-lg hover:shadow-neon-pink/50 hover:scale-105 animate-pulse' 
+                    : 'text-white hover:text-neon-pink'
+                }`}
               >
                 {item.name}
               </motion.button>
@@ -84,7 +88,11 @@ const Header: React.FC<HeaderProps> = ({ onSectionChange }) => {
                       onSectionChange(item.section)
                       setIsMenuOpen(false)
                     }}
-                    className="block w-full text-left text-white hover:text-neon-pink transition-colors duration-300 font-medium py-2"
+                    className={`block w-full text-left transition-all duration-300 font-medium py-2 ${
+                      item.name === 'Chat' 
+                        ? 'bg-gradient-to-r from-neon-pink to-neon-purple text-white px-4 py-3 rounded-lg shadow-lg hover:shadow-neon-pink/50 animate-pulse' 
+                        : 'text-white hover:text-neon-pink'
+                    }`}
                   >
                     {item.name}
                   </button>

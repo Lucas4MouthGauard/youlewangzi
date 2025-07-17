@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Text, Plane, Box } from '@react-three/drei'
 import { Upload, RotateCcw, Download, Eye } from 'lucide-react'
+import * as THREE from 'three'
 
 interface Image3DViewerProps {
   onBack: () => void
@@ -70,11 +71,11 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
     if (file) {
       setIsProcessing(true)
       
-      // 模拟3D处理时间
+      // 模拟3D处理时间，然后显示功能即将上线提示
       setTimeout(() => {
-        const imageUrl = URL.createObjectURL(file)
-        setSelectedImage(imageUrl)
         setIsProcessing(false)
+        // 显示功能即将上线提示
+        alert("This feature will be available in the next version!")
       }, 2000)
     }
   }
