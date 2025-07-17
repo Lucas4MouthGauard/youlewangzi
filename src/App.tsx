@@ -6,8 +6,8 @@ import FatAni3D from './components/FatAni3D'
 import ChatInterface from './components/ChatInterface'
 import Features from './components/Features'
 import Image3DViewer from './components/Image3DViewer'
-import Footer from './components/Footer'
 import ParticleEffect from './components/ParticleEffect'
+import Footer from './components/Footer'
 import WalletConnect from './components/WalletConnect'
 import WalletStatus from './components/WalletStatus'
 
@@ -47,7 +47,6 @@ function App() {
     <WalletConnect>
       <div className="min-h-screen bg-cyber-black relative overflow-hidden">
         <ParticleEffect />
-        
         <Header onSectionChange={setCurrentSection} />
         <WalletStatus />
         

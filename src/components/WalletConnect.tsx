@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react'
-import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
+import { ConnectionProvider, WalletProvider, useWallet } from '@solana/wallet-adapter-react'
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base'
 import { PhantomWalletAdapter, SolflareWalletAdapter, TorusWalletAdapter } from '@solana/wallet-adapter-wallets'
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
+import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 import { clusterApiUrl } from '@solana/web3.js'
 import { motion } from 'framer-motion'
 import { Wallet, LogOut } from 'lucide-react'
 
 // 导入钱包样式
-require('@solana/wallet-adapter-react-ui/styles.css')
+import '@solana/wallet-adapter-react-ui/styles.css'
 
 interface WalletConnectProps {
   children: React.ReactNode
@@ -42,8 +42,6 @@ const WalletConnect: React.FC<WalletConnectProps> = ({ children }) => {
 
 // 钱包连接按钮组件
 export const WalletConnectButton: React.FC = () => {
-  const { WalletMultiButton } = require('@solana/wallet-adapter-react-ui')
-  const { useWallet } = require('@solana/wallet-adapter-react')
   const { connected, disconnect } = useWallet()
 
   return (

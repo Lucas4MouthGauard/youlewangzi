@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Heart, Github, Twitter, Mail, Sparkles } from 'lucide-react'
+import { Heart, Twitter, Sparkles } from 'lucide-react'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -25,13 +25,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-neon-pink transition-colors duration-300">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-neon-pink transition-colors duration-300">
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-neon-pink transition-colors duration-300">
-                <Mail className="w-5 h-5" />
               </a>
             </div>
           </motion.div>
