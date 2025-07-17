@@ -6,67 +6,67 @@ const Features: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: '智能对话',
-      description: '基于先进的自然语言处理技术，能够理解上下文，进行深度对话交流',
+      title: 'Smart Dialogue',
+      description: 'Based on advanced natural language processing technology, capable of understanding context and conducting deep conversations',
       color: 'from-neon-blue to-neon-purple',
       delay: 0.1
     },
     {
       icon: Heart,
-      title: '情感陪伴',
-      description: '具备情感识别能力，能够感知用户情绪变化，提供温暖贴心的陪伴',
+      title: 'Emotional Support',
+      description: 'Equipped with emotion recognition capabilities, able to sense user mood changes and provide warm, caring companionship',
       color: 'from-neon-pink to-neon-purple',
       delay: 0.2
     },
     {
       icon: Zap,
-      title: '3D互动',
-      description: '实时3D渲染技术，支持手势识别和语音交互，带来沉浸式体验',
+      title: '3D Interaction',
+      description: 'Real-time 3D rendering technology, supporting gesture recognition and voice interaction for immersive experiences',
       color: 'from-neon-purple to-neon-pink',
       delay: 0.3
     },
     {
       icon: Shield,
-      title: '隐私保护',
-      description: '端到端加密技术，确保您的隐私安全，所有对话内容严格保密',
+      title: 'Privacy Protection',
+      description: 'End-to-end encryption technology ensures your privacy security, with all conversation content strictly confidential',
       color: 'from-neon-green to-neon-blue',
       delay: 0.4
     },
     {
       icon: Users,
-      title: '社交功能',
-      description: '支持多用户互动，可以与其他用户分享FatAni的陪伴体验',
+      title: 'Social Features',
+      description: 'Supports multi-user interaction, allowing you to share FatAni\'s companionship experience with other users',
       color: 'from-neon-pink to-neon-blue',
       delay: 0.5
     },
     {
       icon: Star,
-      title: '个性化定制',
-      description: '根据用户喜好定制FatAni的外观、性格和行为模式',
+      title: 'Personalization',
+      description: 'Customize FatAni\'s appearance, personality, and behavior patterns according to user preferences',
       color: 'from-neon-purple to-neon-green',
       delay: 0.6
     },
     {
       icon: Globe,
-      title: '多语言支持',
-      description: '支持中文、英文、日文等多种语言，全球用户都能享受服务',
+      title: 'Multi-language Support',
+      description: 'Supports multiple languages including Chinese, English, Japanese, allowing global users to enjoy the service',
       color: 'from-neon-blue to-neon-pink',
       delay: 0.7
     },
     {
       icon: Lock,
-      title: '安全可靠',
-      description: '企业级安全标准，24/7监控，确保系统稳定运行',
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security standards, 24/7 monitoring, ensuring stable system operation',
       color: 'from-neon-green to-neon-purple',
       delay: 0.8
     }
   ]
 
   const stats = [
-    { label: '活跃用户', value: '10万+', color: 'text-neon-pink' },
-    { label: '对话准确率', value: '99.9%', color: 'text-neon-blue' },
-    { label: '响应时间', value: '<100ms', color: 'text-neon-purple' },
-    { label: '满意度', value: '98%', color: 'text-neon-green' }
+    { label: 'Active Users', value: '100K+', color: 'text-neon-pink' },
+    { label: 'Response Accuracy', value: '99.9%', color: 'text-neon-blue' },
+    { label: 'Response Time', value: '<100ms', color: 'text-neon-purple' },
+    { label: 'Satisfaction', value: '98%', color: 'text-neon-green' }
   ]
 
   return (
@@ -79,10 +79,10 @@ const Features: React.FC = () => {
         className="text-center py-16"
       >
         <h1 className="text-5xl md:text-6xl font-bold neon-text mb-6">
-          FatAni 核心功能
+          FatAni Core Features
         </h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto px-4">
-          融合尖端AI技术与少女魅力，为您带来前所未有的智能交互体验
+          Combining cutting-edge AI technology with charming personality for an unprecedented interactive experience
         </p>
       </motion.div>
 
@@ -147,37 +147,37 @@ const Features: React.FC = () => {
       >
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold neon-text text-center mb-12">
-            技术架构
+            Technical Architecture
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="cyber-card">
-              <h3 className="text-xl font-bold text-white mb-4">前端技术</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Frontend Technology</h3>
               <ul className="space-y-2 text-gray-300">
                 <li>• React 18 + TypeScript</li>
-                <li>• Three.js 3D渲染</li>
-                <li>• Framer Motion 动画</li>
-                <li>• Tailwind CSS 样式</li>
+                <li>• Three.js 3D Rendering</li>
+                <li>• Framer Motion Animation</li>
+                <li>• Tailwind CSS Styling</li>
               </ul>
             </div>
             
             <div className="cyber-card">
-              <h3 className="text-xl font-bold text-white mb-4">AI技术</h3>
+              <h3 className="text-xl font-bold text-white mb-4">AI Technology</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• 自然语言处理</li>
-                <li>• 情感识别算法</li>
-                <li>• 深度学习模型</li>
-                <li>• 语音合成技术</li>
+                <li>• Natural Language Processing</li>
+                <li>• Emotion Recognition Algorithm</li>
+                <li>• Deep Learning Models</li>
+                <li>• Speech Synthesis Technology</li>
               </ul>
             </div>
             
             <div className="cyber-card">
-              <h3 className="text-xl font-bold text-white mb-4">安全与性能</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Security & Performance</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• 端到端加密</li>
-                <li>• 实时响应优化</li>
-                <li>• 分布式架构</li>
-                <li>• 99.9%可用性</li>
+                <li>• End-to-end Encryption</li>
+                <li>• Real-time Response Optimization</li>
+                <li>• Distributed Architecture</li>
+                <li>• 99.9% Availability</li>
               </ul>
             </div>
           </div>
@@ -191,28 +191,28 @@ const Features: React.FC = () => {
         transition={{ duration: 0.8, delay: 1.0 }}
         className="max-w-6xl mx-auto px-4 py-16"
       >
-        <h2 className="text-4xl font-bold neon-text text-center mb-12">
-          未来规划
-        </h2>
+                  <h2 className="text-4xl font-bold neon-text text-center mb-12">
+            Future Plans
+          </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="cyber-card">
-            <h3 className="text-2xl font-bold text-white mb-4">短期目标</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Short-term Goals</h3>
             <ul className="space-y-3 text-gray-300">
-              <li>• 增加更多个性化选项</li>
-              <li>• 优化3D模型细节</li>
-              <li>• 提升对话智能度</li>
-              <li>• 扩展多语言支持</li>
+              <li>• Add more personalization options</li>
+              <li>• Optimize 3D model details</li>
+              <li>• Enhance dialogue intelligence</li>
+              <li>• Expand multi-language support</li>
             </ul>
           </div>
           
           <div className="cyber-card">
-            <h3 className="text-2xl font-bold text-white mb-4">长期愿景</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Long-term Vision</h3>
             <ul className="space-y-3 text-gray-300">
-              <li>• VR/AR沉浸式体验</li>
-              <li>• 全息投影技术</li>
-              <li>• 情感记忆系统</li>
-              <li>• 跨平台同步</li>
+              <li>• VR/AR Immersive Experience</li>
+              <li>• Holographic Projection Technology</li>
+              <li>• Emotional Memory System</li>
+              <li>• Cross-platform Synchronization</li>
             </ul>
           </div>
         </div>

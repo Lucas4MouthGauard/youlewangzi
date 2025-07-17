@@ -122,7 +122,7 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
           <div className="w-full h-full flex items-center justify-center bg-cyber-gray/20 border-2 border-dashed border-neon-pink/30 rounded-lg">
             <div className="text-center">
               <Eye className="w-16 h-16 text-neon-pink mx-auto mb-4" />
-              <p className="text-gray-300 text-lg">请选择图片进行3D化展示</p>
+              <p className="text-gray-300 text-lg">Please select an image for 3D display</p>
             </div>
           </div>
         )}
@@ -132,8 +132,8 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
           <div className="absolute inset-0 bg-cyber-black/80 flex items-center justify-center">
             <div className="text-center">
               <div className="w-16 h-16 border-4 border-neon-pink border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-neon-pink text-lg">正在处理图片...</p>
-              <p className="text-gray-300 text-sm">3D化转换中</p>
+              <p className="text-neon-pink text-lg">Processing image...</p>
+              <p className="text-gray-300 text-sm">Converting to 3D</p>
             </div>
           </div>
         )}
@@ -147,9 +147,9 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center lg:text-left"
         >
-          <h2 className="text-4xl font-bold neon-text mb-4">图片3D化</h2>
+          <h2 className="text-4xl font-bold neon-text mb-4">3D Image Conversion</h2>
           <p className="text-lg text-gray-300 mb-8">
-            将您的2D图片转换为沉浸式3D体验，支持交互操作和实时渲染
+            Convert your 2D images into immersive 3D experiences with interactive controls and real-time rendering
           </p>
         </motion.div>
 
@@ -160,7 +160,7 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="cyber-card"
         >
-          <h3 className="text-lg font-bold text-white mb-4">上传图片</h3>
+          <h3 className="text-lg font-bold text-white mb-4">Upload Image</h3>
           <input
             ref={fileInputRef}
             type="file"
@@ -174,10 +174,10 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
             className="cyber-button w-full group"
           >
             <Upload className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-            选择图片文件
+            Select Image File
           </button>
           <p className="text-gray-400 text-sm mt-2">
-            支持 JPG, PNG, GIF 格式，最大 10MB
+            Supports JPG, PNG, GIF formats, max 10MB
           </p>
         </motion.div>
 
@@ -188,7 +188,7 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="cyber-card"
         >
-          <h3 className="text-lg font-bold text-white mb-4">示例图片</h3>
+          <h3 className="text-lg font-bold text-white mb-4">Sample Images</h3>
           <div className="grid grid-cols-2 gap-4">
             {sampleImages.map((imageUrl, index) => (
               <button
@@ -199,7 +199,7 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
               >
                 <img
                   src={imageUrl}
-                  alt={`示例图片 ${index + 1}`}
+                  alt={`Sample Image ${index + 1}`}
                   className="w-full h-24 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-neon-pink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -226,8 +226,8 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
                 <RotateCcw className="w-6 h-6 text-white" />
               </div>
               <div className="text-left">
-                <h3 className="text-lg font-bold text-white">重置视图</h3>
-                <p className="text-gray-300 text-sm">清除当前图片</p>
+                                  <h3 className="text-lg font-bold text-white">Reset View</h3>
+                  <p className="text-gray-300 text-sm">Clear current image</p>
               </div>
             </div>
           </button>
@@ -241,8 +241,8 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
                 <Download className="w-6 h-6 text-white" />
               </div>
               <div className="text-left">
-                <h3 className="text-lg font-bold text-white">返回主页</h3>
-                <p className="text-gray-300 text-sm">回到FatAni主页</p>
+                                  <h3 className="text-lg font-bold text-white">Back to Home</h3>
+                  <p className="text-gray-300 text-sm">Return to FatAni homepage</p>
               </div>
             </div>
           </button>
@@ -255,23 +255,23 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="cyber-card"
         >
-          <h3 className="text-lg font-bold text-white mb-4">技术特性</h3>
+          <h3 className="text-lg font-bold text-white mb-4">Technical Features</h3>
           <div className="space-y-2 text-sm text-gray-300">
             <div className="flex justify-between">
-              <span>渲染引擎</span>
+              <span>Rendering Engine</span>
               <span className="text-neon-blue">Three.js</span>
             </div>
             <div className="flex justify-between">
-              <span>处理速度</span>
-              <span className="text-neon-pink">实时</span>
+              <span>Processing Speed</span>
+              <span className="text-neon-pink">Real-time</span>
             </div>
             <div className="flex justify-between">
-              <span>支持格式</span>
+              <span>Supported Formats</span>
               <span className="text-neon-purple">JPG/PNG/GIF</span>
             </div>
             <div className="flex justify-between">
-              <span>交互模式</span>
-              <span className="text-neon-green">3D旋转/缩放</span>
+              <span>Interaction Mode</span>
+              <span className="text-neon-green">3D Rotate/Zoom</span>
             </div>
           </div>
         </motion.div>

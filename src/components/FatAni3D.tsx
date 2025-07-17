@@ -105,9 +105,9 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
   const [currentAction, setCurrentAction] = useState('idle')
 
   const actions = [
-    { id: 'chat', icon: MessageCircle, label: '开始聊天', color: 'from-neon-blue to-neon-purple' },
-    { id: 'love', icon: Heart, label: '表达爱意', color: 'from-neon-pink to-neon-purple' },
-    { id: 'settings', icon: Settings, label: '个性化', color: 'from-neon-purple to-neon-pink' }
+    { id: 'chat', icon: MessageCircle, label: 'Start Chat', color: 'from-neon-blue to-neon-purple' },
+    { id: 'love', icon: Heart, label: 'Show Love', color: 'from-neon-pink to-neon-purple' },
+    { id: 'settings', icon: Settings, label: 'Customize', color: 'from-neon-purple to-neon-pink' }
   ]
 
   return (
@@ -141,8 +141,8 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
           className="absolute bottom-4 left-4 right-4 lg:left-8 lg:right-8"
         >
           <div className="cyber-card text-center">
-            <h3 className="text-xl font-bold neon-text mb-2">FatAni 3D模型</h3>
-            <p className="text-gray-300">实时渲染的AI美少女，支持交互操作</p>
+            <h3 className="text-xl font-bold neon-text mb-2">FatAni 3D Model</h3>
+            <p className="text-gray-300">Real-time rendered AI companion with interactive controls</p>
           </div>
         </motion.div>
       </div>
@@ -155,9 +155,9 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center lg:text-left"
         >
-          <h2 className="text-4xl font-bold neon-text mb-4">与FatAni互动</h2>
+          <h2 className="text-4xl font-bold neon-text mb-4">Interact with FatAni</h2>
           <p className="text-lg text-gray-300 mb-8">
-            通过先进的3D技术，体验与AI美少女的真实互动
+            Experience real interaction with AI companion through advanced 3D technology
           </p>
         </motion.div>
 
@@ -184,9 +184,9 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
                 <div className="text-left">
                   <h3 className="text-lg font-bold text-white">{action.label}</h3>
                   <p className="text-gray-300 text-sm">
-                    {action.id === 'chat' && '开始智能对话'}
-                    {action.id === 'love' && '表达情感互动'}
-                    {action.id === 'settings' && '个性化设置'}
+                    {action.id === 'chat' && 'Start intelligent dialogue'}
+                    {action.id === 'love' && 'Express emotional interaction'}
+                    {action.id === 'settings' && 'Personalization settings'}
                   </p>
                 </div>
               </div>
@@ -201,19 +201,19 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="cyber-card"
         >
-          <h3 className="text-lg font-bold text-white mb-4">系统状态</h3>
+          <h3 className="text-lg font-bold text-white mb-4">System Status</h3>
           <div className="space-y-2">
             <div className="flex justify-between">
-              <span className="text-gray-300">AI响应</span>
-              <span className="text-neon-green">在线</span>
+              <span className="text-gray-300">AI Response</span>
+              <span className="text-neon-green">Online</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-300">3D渲染</span>
+              <span className="text-gray-300">3D Rendering</span>
               <span className="text-neon-blue">60 FPS</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-300">情感引擎</span>
-              <span className="text-neon-pink">活跃</span>
+              <span className="text-gray-300">Emotion Engine</span>
+              <span className="text-neon-pink">Active</span>
             </div>
           </div>
         </motion.div>

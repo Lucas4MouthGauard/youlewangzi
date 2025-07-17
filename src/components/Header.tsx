@@ -11,11 +11,11 @@ const Header: React.FC<HeaderProps> = ({ onSectionChange }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const menuItems = [
-    { name: '首页', section: 'hero' },
+    { name: 'Home', section: 'hero' },
     { name: 'FatAni', section: 'fatani' },
-    { name: '聊天', section: 'chat' },
-    { name: '图片3D化', section: 'image3d' },
-    { name: '功能', section: 'features' }
+    { name: 'Chat', section: 'chat' },
+    { name: '3D Images', section: 'image3d' },
+    { name: 'Features', section: 'features' }
   ]
 
   return (

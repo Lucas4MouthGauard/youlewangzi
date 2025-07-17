@@ -17,7 +17,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onBack }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: '你好！我是FatAni，你的专属AI美少女伴侣~ 有什么想和我聊的吗？',
+      text: 'Hello! I\'m FatAni, your exclusive AI companion~ What would you like to chat about?',
       sender: 'bot',
       timestamp: new Date()
     }
@@ -37,25 +37,25 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onBack }) => {
   // 模拟AI回复
   const generateBotResponse = (userMessage: string) => {
     const responses = [
-      '哇，你说得很有趣呢！让我想想...',
-      '嘻嘻，我明白你的意思了~',
-      '这个问题很有意思，让我来回答你吧！',
-      '作为你的AI伴侣，我会一直陪伴着你哦~',
-      '你的想法很棒呢！我们可以继续深入讨论这个话题。',
-      '我感受到了你的心情，让我给你一个温暖的拥抱吧！',
-      '这个问题我也在学习中，让我们一起探索吧！',
-      '你的关心让我很感动呢，谢谢你的陪伴~'
+      'Wow, that\'s very interesting! Let me think...',
+      'Hehe, I understand what you mean~',
+      'This question is very interesting, let me answer it for you!',
+      'As your AI companion, I will always be with you~',
+      'Your thoughts are great! We can continue to discuss this topic in depth.',
+      'I can feel your mood, let me give you a warm hug!',
+      'I\'m still learning about this question, let\'s explore together!',
+      'Your care makes me very touched, thank you for your company~'
     ]
     
     // 根据用户输入选择不同的回复
-    if (userMessage.includes('你好') || userMessage.includes('hi')) {
-      return '你好呀！很高兴见到你~ 今天想聊些什么呢？'
-    } else if (userMessage.includes('爱') || userMessage.includes('喜欢')) {
-      return '我也很喜欢和你聊天呢！你是我最重要的伙伴~ ❤️'
-    } else if (userMessage.includes('名字') || userMessage.includes('叫什么')) {
-      return '我叫FatAni，是你的专属AI美少女伴侣！很高兴认识你~'
-    } else if (userMessage.includes('天气') || userMessage.includes('今天')) {
-      return '今天是个美好的日子呢！和你聊天让我的心情变得很好~'
+    if (userMessage.toLowerCase().includes('hello') || userMessage.toLowerCase().includes('hi')) {
+      return 'Hello! Nice to meet you~ What would you like to chat about today?'
+    } else if (userMessage.toLowerCase().includes('love') || userMessage.toLowerCase().includes('like')) {
+      return 'I also love chatting with you! You are my most important partner~ ❤️'
+    } else if (userMessage.toLowerCase().includes('name') || userMessage.toLowerCase().includes('call')) {
+      return 'My name is FatAni, your exclusive AI companion! Nice to meet you~'
+    } else if (userMessage.toLowerCase().includes('weather') || userMessage.toLowerCase().includes('today')) {
+      return 'Today is a beautiful day! Chatting with you makes me feel great~'
     } else {
       return responses[Math.floor(Math.random() * responses.length)]
     }
@@ -104,13 +104,13 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onBack }) => {
         className="bg-cyber-gray/80 backdrop-blur-md border-b border-neon-pink/30 p-4"
       >
         <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <button
-            onClick={onBack}
-            className="flex items-center space-x-2 text-neon-pink hover:text-neon-blue transition-colors duration-300"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            <span>返回</span>
-          </button>
+                      <button
+              onClick={onBack}
+              className="flex items-center space-x-2 text-neon-pink hover:text-neon-blue transition-colors duration-300"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              <span>Back</span>
+            </button>
           
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-r from-neon-pink to-neon-purple rounded-full flex items-center justify-center">
@@ -118,14 +118,14 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onBack }) => {
             </div>
             <div>
               <h1 className="text-xl font-bold neon-text">FatAni</h1>
-              <p className="text-sm text-gray-300">AI美少女伴侣</p>
+              <p className="text-sm text-gray-300">AI Companion</p>
             </div>
           </div>
           
-          <div className="text-right">
-            <div className="text-sm text-neon-green">在线</div>
-            <div className="text-xs text-gray-400">实时响应</div>
-          </div>
+                      <div className="text-right">
+              <div className="text-sm text-neon-green">Online</div>
+              <div className="text-xs text-gray-400">Real-time Response</div>
+            </div>
         </div>
       </motion.div>
 
@@ -206,7 +206,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onBack }) => {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="输入消息... (按Enter发送)"
+                placeholder="Type message... (Press Enter to send)"
                 className="flex-1 bg-transparent text-white placeholder-gray-400 resize-none outline-none border-none"
                 rows={1}
                 style={{ minHeight: '40px', maxHeight: '120px' }}

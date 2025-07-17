@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               <span className="text-2xl font-bold neon-text">FatAni</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              您的专属AI美少女伴侣，融合尖端科技与少女魅力，为您带来前所未有的智能交互体验。
+              Your exclusive AI companion, combining cutting-edge technology with charming personality for an unprecedented interactive experience.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-neon-pink transition-colors duration-300">
@@ -42,26 +42,26 @@ const Footer: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-lg font-bold text-white mb-4">快速链接</h3>
+            <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-300 hover:text-neon-pink transition-colors duration-300">
-                  首页
+                  Home
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-neon-pink transition-colors duration-300">
-                  功能介绍
+                  Features
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-neon-pink transition-colors duration-300">
-                  开始体验
+                  Start Experience
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-neon-pink transition-colors duration-300">
-                  技术支持
+                  Support
                 </a>
               </li>
             </ul>
@@ -73,16 +73,13 @@ const Footer: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-lg font-bold text-white mb-4">联系我们</h3>
+            <h3 className="text-lg font-bold text-white mb-4">Contact Us</h3>
             <ul className="space-y-2">
               <li className="text-gray-300">
-                邮箱: contact@fatani.ai
+                Support: 24/7 Online
               </li>
               <li className="text-gray-300">
-                客服: 24/7在线
-              </li>
-              <li className="text-gray-300">
-                地址: 虚拟世界
+                Location: Virtual World
               </li>
             </ul>
           </motion.div>
@@ -97,7 +94,7 @@ const Footer: React.FC = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} FatAni. 保留所有权利。
+              © {currentYear} FatAni. All rights reserved.
             </p>
             <div className="flex items-center space-x-2 mt-4 md:mt-0">
               <span className="text-gray-400 text-sm">Made with</span>
