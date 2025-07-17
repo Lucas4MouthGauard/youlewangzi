@@ -194,11 +194,47 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
           ))}
         </div>
 
+        {/* CA信息和Buy按钮 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="cyber-card"
+        >
+          <h3 className="text-lg font-bold text-white mb-4">Token Information</h3>
+          <div className="space-y-4">
+            <div className="bg-cyber-gray/50 p-3 rounded-lg">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-gray-300 text-sm">Contract Address:</span>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText('0x1234567890abcdef1234567890abcdef12345678')
+                    alert('Contract address copied to clipboard!')
+                  }}
+                  className="text-neon-blue hover:text-neon-pink text-sm transition-colors duration-300"
+                >
+                  Copy
+                </button>
+              </div>
+              <div className="text-white font-mono text-xs break-all">
+                0x1234567890abcdef1234567890abcdef12345678
+              </div>
+            </div>
+            
+            <button
+              onClick={() => alert('Buy function will be available soon!')}
+              className="w-full cyber-button bg-gradient-to-r from-neon-green to-neon-blue hover:from-neon-blue hover:to-neon-green transition-all duration-300"
+            >
+              Buy $FATANI
+            </button>
+          </div>
+        </motion.div>
+
         {/* 状态信息 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           className="cyber-card"
         >
           <h3 className="text-lg font-bold text-white mb-4">System Status</h3>
