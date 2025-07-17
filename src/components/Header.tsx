@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ onSectionChange }) => {
 
   const menuItems = [
     { name: 'Home', section: 'hero' },
-    { name: 'FatAni', section: 'fatani' },
+    { name: 'Valentine', section: 'fatani' },
     { name: 'Chat', section: 'chat' },
     { name: '3D Images', section: 'image3d' },
     { name: 'Features', section: 'features' }
@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ onSectionChange }) => {
             onClick={() => onSectionChange('hero')}
           >
             <Sparkles className="w-8 h-8 text-neon-pink animate-pulse" />
-            <span className="text-2xl font-bold neon-text">FatAni</span>
+            <span className="text-2xl font-bold neon-text">Valentine</span>
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ onExplore, onImage3D }) => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-6xl md:text-8xl font-bold neon-text"
             >
-              FatAni
+              Valentine
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}

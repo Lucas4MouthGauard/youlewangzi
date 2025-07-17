@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           >
             <div className="flex items-center space-x-2 mb-4">
               <Sparkles className="w-8 h-8 text-neon-pink animate-pulse" />
-              <span className="text-2xl font-bold neon-text">FatAni</span>
+              <span className="text-2xl font-bold neon-text">Valentine</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Your exclusive AI companion, combining cutting-edge technology with charming personality for an unprecedented interactive experience.
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} FatAni. All rights reserved.
+              © {currentYear} Valentine. All rights reserved.
             </p>
             <div className="flex items-center space-x-2 mt-4 md:mt-0">
               <span className="text-gray-400 text-sm">Made with</span>

@@ -17,7 +17,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onBack }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello! I\'m FatAni, your exclusive AI companion~ What would you like to chat about?',
+      text: 'Hello! I\'m Valentine, your exclusive AI companion~ What would you like to chat about?',
       sender: 'bot',
       timestamp: new Date()
     }
@@ -53,7 +53,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onBack }) => {
     } else if (userMessage.toLowerCase().includes('love') || userMessage.toLowerCase().includes('like')) {
       return 'I also love chatting with you! You are my most important partner~ ❤️'
     } else if (userMessage.toLowerCase().includes('name') || userMessage.toLowerCase().includes('call')) {
-      return 'My name is FatAni, your exclusive AI companion! Nice to meet you~'
+      return 'My name is Valentine, your exclusive AI companion! Nice to meet you~'
     } else if (userMessage.toLowerCase().includes('weather') || userMessage.toLowerCase().includes('today')) {
       return 'Today is a beautiful day! Chatting with you makes me feel great~'
     } else {
@@ -117,7 +117,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onBack }) => {
               <Bot className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold neon-text">FatAni</h1>
+              <h1 className="text-xl font-bold neon-text">Valentine</h1>
               <p className="text-sm text-gray-300">AI Companion</p>
             </div>
           </div>

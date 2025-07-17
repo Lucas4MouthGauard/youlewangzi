@@ -141,7 +141,7 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
           className="absolute bottom-4 left-4 right-4 lg:left-8 lg:right-8"
         >
           <div className="cyber-card text-center">
-            <h3 className="text-xl font-bold neon-text mb-2">FatAni 3D Model</h3>
+            <h3 className="text-xl font-bold neon-text mb-2">Valentine 3D Model</h3>
             <p className="text-gray-300">Real-time rendered AI companion with interactive controls</p>
           </div>
         </motion.div>
@@ -155,7 +155,7 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center lg:text-left"
         >
-          <h2 className="text-4xl font-bold neon-text mb-4">Interact with FatAni</h2>
+          <h2 className="text-4xl font-bold neon-text mb-4">Interact with Valentine</h2>
           <p className="text-lg text-gray-300 mb-8">
             Experience real interaction with AI companion through advanced 3D technology
           </p>
@@ -225,7 +225,7 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
                 onClick={() => window.open('https://letsbonk.fun/token/Cq4HdLWjyyBNzZgyPuJrUh7Y7WncgDLoJpJKpZe6bonk', '_blank')}
                 className="w-full cyber-button bg-gradient-to-r from-neon-green to-neon-blue hover:from-neon-blue hover:to-neon-green transition-all duration-300"
               >
-                Buy $FATANI
+                Buy $游乐王子
               </button>
           </div>
         </motion.div>

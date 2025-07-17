@@ -33,7 +33,7 @@ function App() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <div className="text-6xl font-bold neon-text mb-4">FatAni</div>
+          <div className="text-6xl font-bold neon-text mb-4">Valentine</div>
           <div className="text-neon-blue text-xl">Initializing AI System...</div>
           <div className="mt-8">
             <div className="w-16 h-16 border-4 border-neon-pink border-t-transparent rounded-full animate-spin mx-auto"></div>

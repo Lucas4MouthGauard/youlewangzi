@@ -79,7 +79,7 @@ const Features: React.FC = () => {
         className="text-center py-16"
       >
         <h1 className="text-5xl md:text-6xl font-bold neon-text mb-6">
-          FatAni Core Features
+          Valentine Core Features
         </h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto px-4">
           Combining cutting-edge AI technology with charming personality for an unprecedented interactive experience
