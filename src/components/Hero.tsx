@@ -4,9 +4,10 @@ import { ArrowRight, Heart, Zap, Brain } from 'lucide-react'
 
 interface HeroProps {
   onExplore: () => void
+  onImage3D?: () => void
 }
 
-const Hero: React.FC<HeroProps> = ({ onExplore }) => {
+const Hero: React.FC<HeroProps> = ({ onExplore, onImage3D }) => {
   return (
     <section className="min-h-screen flex items-center justify-center relative pt-16">
       {/* Background Effects */}
@@ -85,7 +86,7 @@ const Hero: React.FC<HeroProps> = ({ onExplore }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
-            className="mt-12"
+            className="mt-12 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button
               onClick={onExplore}
@@ -94,6 +95,15 @@ const Hero: React.FC<HeroProps> = ({ onExplore }) => {
               开始体验
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
+            {onImage3D && (
+              <button
+                onClick={onImage3D}
+                className="cyber-button group text-lg px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-purple"
+              >
+                图片3D化
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </button>
+            )}
           </motion.div>
 
           {/* Stats */}

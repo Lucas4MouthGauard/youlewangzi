@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import FatAni3D from './components/FatAni3D'
 import ChatInterface from './components/ChatInterface'
 import Features from './components/Features'
+import Image3DViewer from './components/Image3DViewer'
 import Footer from './components/Footer'
 import ParticleEffect from './components/ParticleEffect'
 
@@ -56,7 +57,10 @@ function App() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Hero onExplore={() => setCurrentSection('fatani')} />
+              <Hero 
+                onExplore={() => setCurrentSection('fatani')} 
+                onImage3D={() => setCurrentSection('image3d')}
+              />
             </motion.div>
           )}
           
@@ -93,6 +97,18 @@ function App() {
               transition={{ duration: 0.5 }}
             >
               <Features />
+            </motion.div>
+          )}
+          
+          {currentSection === 'image3d' && (
+            <motion.div
+              key="image3d"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Image3DViewer onBack={() => setCurrentSection('hero')} />
             </motion.div>
           )}
         </AnimatePresence>
