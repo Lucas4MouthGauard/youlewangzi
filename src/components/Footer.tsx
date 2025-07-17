@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
               Your exclusive AI companion, combining cutting-edge technology with charming personality for an unprecedented interactive experience.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-neon-pink transition-colors duration-300">
+              <a href="https://x.com/0XFatAni" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-pink transition-colors duration-300">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
