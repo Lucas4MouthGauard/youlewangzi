@@ -8,6 +8,8 @@ import Features from './components/Features'
 import Image3DViewer from './components/Image3DViewer'
 import Footer from './components/Footer'
 import ParticleEffect from './components/ParticleEffect'
+import WalletConnect from './components/WalletConnect'
+import WalletStatus from './components/WalletStatus'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -42,80 +44,83 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-cyber-black relative overflow-hidden">
-      <ParticleEffect />
-      
-      <Header onSectionChange={setCurrentSection} />
-      
-      <main className="relative z-10">
-        <AnimatePresence mode="wait">
-          {currentSection === 'hero' && (
-            <motion.div
-              key="hero"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Hero 
-                onExplore={() => setCurrentSection('fatani')} 
-                onImage3D={() => setCurrentSection('image3d')}
-              />
-            </motion.div>
-          )}
-          
-          {currentSection === 'fatani' && (
-            <motion.div
-              key="fatani"
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-            >
-              <FatAni3D onChat={() => setCurrentSection('chat')} />
-            </motion.div>
-          )}
-          
-          {currentSection === 'chat' && (
-            <motion.div
-              key="chat"
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.5 }}
-            >
-              <ChatInterface onBack={() => setCurrentSection('fatani')} />
-            </motion.div>
-          )}
-          
-          {currentSection === 'features' && (
-            <motion.div
-              key="features"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Features />
-            </motion.div>
-          )}
-          
-          {currentSection === 'image3d' && (
-            <motion.div
-              key="image3d"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Image3DViewer onBack={() => setCurrentSection('hero')} />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </main>
-      
-      <Footer />
-    </div>
+    <WalletConnect>
+      <div className="min-h-screen bg-cyber-black relative overflow-hidden">
+        <ParticleEffect />
+        
+        <Header onSectionChange={setCurrentSection} />
+        <WalletStatus />
+        
+        <main className="relative z-10">
+          <AnimatePresence mode="wait">
+            {currentSection === 'hero' && (
+              <motion.div
+                key="hero"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Hero 
+                  onExplore={() => setCurrentSection('fatani')} 
+                  onImage3D={() => setCurrentSection('image3d')}
+                />
+              </motion.div>
+            )}
+            
+            {currentSection === 'fatani' && (
+              <motion.div
+                key="fatani"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+              >
+                <FatAni3D onChat={() => setCurrentSection('chat')} />
+              </motion.div>
+            )}
+            
+            {currentSection === 'chat' && (
+              <motion.div
+                key="chat"
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: 0.5 }}
+              >
+                <ChatInterface onBack={() => setCurrentSection('fatani')} />
+              </motion.div>
+            )}
+            
+            {currentSection === 'features' && (
+              <motion.div
+                key="features"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Features />
+              </motion.div>
+            )}
+            
+            {currentSection === 'image3d' && (
+              <motion.div
+                key="image3d"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image3DViewer onBack={() => setCurrentSection('hero')} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </main>
+        
+        <Footer />
+      </div>
+    </WalletConnect>
   )
 }
 

@@ -63,13 +63,7 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
   const [isProcessing, setIsProcessing] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  // 示例图片
-  const sampleImages = [
-    'https://via.placeholder.com/400x600/ff6ec7/ffffff?text=FatAni+1',
-    'https://via.placeholder.com/400x600/00d4ff/ffffff?text=FatAni+2',
-    'https://via.placeholder.com/400x600/9d4edd/ffffff?text=FatAni+3',
-    'https://via.placeholder.com/400x600/ff69b4/ffffff?text=FatAni+4'
-  ]
+
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0]
@@ -85,13 +79,7 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
     }
   }
 
-  const handleSampleImage = (imageUrl: string) => {
-    setIsProcessing(true)
-    setTimeout(() => {
-      setSelectedImage(imageUrl)
-      setIsProcessing(false)
-    }, 1500)
-  }
+
 
   const resetView = () => {
     setSelectedImage(null)
@@ -181,34 +169,7 @@ const Image3DViewer: React.FC<Image3DViewerProps> = ({ onBack }) => {
           </p>
         </motion.div>
 
-        {/* 示例图片 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="cyber-card"
-        >
-          <h3 className="text-lg font-bold text-white mb-4">Sample Images</h3>
-          <div className="grid grid-cols-2 gap-4">
-            {sampleImages.map((imageUrl, index) => (
-              <button
-                key={index}
-                onClick={() => handleSampleImage(imageUrl)}
-                disabled={isProcessing}
-                className="relative group overflow-hidden rounded-lg border border-neon-pink/30 hover:border-neon-pink transition-all duration-300"
-              >
-                <img
-                  src={imageUrl}
-                  alt={`Sample Image ${index + 1}`}
-                  className="w-full h-24 object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-neon-pink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Eye className="w-6 h-6 text-white" />
-                </div>
-              </button>
-            ))}
-          </div>
-        </motion.div>
+
 
         {/* 操作按钮 */}
         <motion.div

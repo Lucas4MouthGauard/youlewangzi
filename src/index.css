@@ -88,4 +88,59 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Solana钱包按钮样式覆盖 */
+.wallet-adapter-button {
+  background: linear-gradient(135deg, #9d4edd 0%, #ff6ec7 100%) !important;
+  border: 2px solid #ff6ec7 !important;
+  color: white !important;
+  font-weight: bold !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(255, 110, 199, 0.3) !important;
+}
+
+.wallet-adapter-button:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 0 20px rgba(255, 110, 199, 0.5) !important;
+  background: linear-gradient(135deg, #ff6ec7 0%, #9d4edd 100%) !important;
+}
+
+.wallet-adapter-button:not([disabled]):hover {
+  background: linear-gradient(135deg, #ff6ec7 0%, #9d4edd 100%) !important;
+}
+
+.wallet-adapter-modal-wrapper {
+  z-index: 9999 !important;
+}
+
+.wallet-adapter-modal {
+  background: #1a1a1a !important;
+  border: 2px solid #ff6ec7 !important;
+  border-radius: 12px !important;
+}
+
+.wallet-adapter-modal-title {
+  color: #ff6ec7 !important;
+  font-family: 'Orbitron', monospace !important;
+}
+
+.wallet-adapter-modal-list {
+  background: #2a2a2a !important;
+}
+
+.wallet-adapter-modal-list-item {
+  background: #1a1a1a !important;
+  border: 1px solid #ff6ec7 !important;
+  border-radius: 8px !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+
+.wallet-adapter-modal-list-item:hover {
+  background: #ff6ec7 !important;
+  color: #1a1a1a !important;
+  transform: scale(1.02) !important;
 } 

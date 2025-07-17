@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Sparkles } from 'lucide-react'
 import { AnimatePresence } from 'framer-motion'
+import { WalletConnectButton } from './WalletConnect'
 
 interface HeaderProps {
   onSectionChange: (section: string) => void
@@ -35,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ onSectionChange }) => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             {menuItems.map((item, index) => (
               <motion.button
                 key={item.name}
@@ -48,10 +49,14 @@ const Header: React.FC<HeaderProps> = ({ onSectionChange }) => {
                 {item.name}
               </motion.button>
             ))}
+            
+            {/* Wallet Connect Button */}
+            <WalletConnectButton />
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-4">
+            <WalletConnectButton />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white hover:text-neon-pink transition-colors duration-300"
