@@ -208,8 +208,8 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
                   <span className="text-gray-300 text-sm">Contract Address:</span>
                   <button
                     onClick={() => {
-                      navigator.clipboard.writeText('')
-                      alert('No contract address available!')
+                      navigator.clipboard.writeText('8wS4CdhfUQm1BXSMuvCnyms2YyYh9JeTGdZUMENibonk')
+                      alert('Contract address copied to clipboard!')
                     }}
                     className="text-neon-blue hover:text-neon-pink text-sm transition-colors duration-300"
                   >
@@ -217,13 +217,13 @@ const FatAni3D: React.FC<FatAni3DProps> = ({ onChat }) => {
                   </button>
                 </div>
                 <div className="text-white font-mono text-xs break-all">
-                  {/* 合约地址已清空 */}
+                  8wS4CdhfUQm1BXSMuvCnyms2YyYh9JeTGdZUMENibonk
                 </div>
               </div>
               
               <button
-                disabled
-                className="w-full cyber-button bg-gradient-to-r from-neon-green to-neon-blue opacity-50 cursor-not-allowed"
+                onClick={() => window.open('https://letsbonk.fun/token/8wS4CdhfUQm1BXSMuvCnyms2YyYh9JeTGdZUMENibonk', '_blank')}
+                className="w-full cyber-button bg-gradient-to-r from-neon-green to-neon-blue hover:from-neon-blue hover:to-neon-green transition-all duration-300"
               >
                 Buy $游乐王子
               </button>
